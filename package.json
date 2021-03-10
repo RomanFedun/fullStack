@@ -1,0 +1,45 @@
+{
+  "name": "angularfullstack",
+  "version": "1.0.0",
+  "description": "app with angular and express",
+  "main": "index.js",
+  "engines": {
+    "node": "15.5.1",
+    "npm": "7.3.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client-install": "npm install --prefix client",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run client-install && npm run build --prefix client "
+  },
+  "keywors": [
+    "js",
+    "javascript",
+    "webpack"
+  ],
+  "author": "Roman Fedun <fero5uin@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.11.9",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.6"
+  }
+}
